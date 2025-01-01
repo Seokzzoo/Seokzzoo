@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>{{ message }}</h1>
+      <button v-on:click="countNumber++">카운트 넘버: {{ countNumber }}</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      // 구조 분해 할당
+      const { createApp, ref } = Vue
+
+      const app = createApp({
+        setup() {
+          const message = ref("Hello Vue!")
+          const countNumber = ref(0)
+          return {
+            message, // 단축 속성 -> 변수명과 속성 명이 같을 때 사용
+            countNumber,
+          }
+        },
+      })
+
+      app.mount("#app") // id 속성이 app인 태그에 객체를 전달한다.
+    </script>
+  </body>
+</html>

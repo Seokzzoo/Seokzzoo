@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Hello</h2>
+    <div id="world">World!</div>
+    <span class="number">1</span>
+    <span class="number">2</span>
+    <span class="number">3</span>
+    <script>
+      const h2 = document.querySelector("h2")
+      const world = document.querySelector("#world")
+      const number = document.querySelector(".number")
+      const numbers = document.querySelectorAll(".number")
+
+      console.log(h2)
+      console.log(world)
+      console.log(number)
+      console.log(numbers)
+
+      h2.innerText = "안녕하세요!"
+      h2.style.color = "red"
+
+      const div = document.querySelector("div")
+      div.innerText = "앙 기모띠"
+      h2.appendChild(div)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!-- 버튼 클릭 이벤트가 발생하면, 제목 태그의 텍스트를 사용자가 input 태그 요소의 필드에 입력한
+ 텍스트로 변경하는 코드를 작성한다. 이때 만약 필드가 비었다면 (사용자가 텍스트를 입력하지 않았다면) 
+ 아무런 액션도 취하지 않고, 제목 태그의 텍스트를 변경했다면 필드의 텍스트를 다시 비우도록 한다.-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>안녕하세요!</h2>
+    <input type="text" />
+    <button>변경</button>
+
+    <script>
+      const h2 = document.querySelector("h2")
+      const input = document.querySelector("input")
+      const button = document.querySelector("button")
+
+      button.addEventListener("click", () => {
+        if (input.value !== "") {
+          h2.innerText = input.value
+          input.value = ""
+        }
+      })
+    </script>
+  </body>
+</html>

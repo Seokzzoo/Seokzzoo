@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      parent
+      <div class="child">
+        child
+        <div class="grandson">grandson</div>
+      </div>
+    </div>
+    <script>
+      const parent = document.querySelector(".parent")
+      const child = document.querySelector(".child")
+      const grandson = document.querySelector(".grandson")
+
+      // parent.addEventListener("click", () => console.log("parent"))
+      // child.addEventListener("click", () => console.log("child"))
+      // grandson.addEventListener("click", () => console.log("grandson"))
+
+      function handler(event) {
+        console.log(event.target)
+        console.log(event.currentTarget)
+      }
+
+      parent.addEventListener("click", handler)
+      child.addEventListener("click", () => {})
+      grandson.addEventListener("click", () => {})
+    </script>
+  </body>
+</html>
+
+<!-- event.target -> 이벤트를 발생시킨 정확한 대상을 표시 -->

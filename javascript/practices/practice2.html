@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="button1">button1</button>
+    <button class="button2">button2</button>
+    <script>
+      const button1 = document.querySelector(".button1")
+      const button2 = document.querySelector(".button2")
+      const handler = () => {
+        console.log("button1")
+      }
+      const deHandler = () => {
+        button1.removeEventListener("click", handler)
+      }
+
+      button1.addEventListener("click", handler)
+      button2.addEventListener("click", deHandler)
+    </script>
+  </body>
+</html>

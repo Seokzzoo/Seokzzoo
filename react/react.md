@@ -77,3 +77,41 @@
 - useState
 - useEffect
 - useCallback
+
+### Rerendering
+- 상태(State, Props)가 변경되면 화면을 다시 그림
+
+### Accordian Component
+- 펼쳤다 접었다 할 수 있는 컴포넌트
+- 아코디언 콘텐츠가 펼쳐져 있을 때는 상단 오른쪽에 - 문자가, 접혀있을 때는 + 문자가 표시
+
+### JSX에서 함수 연결하기
+- JSX에서 camelCase 형태의 속성에 함수를 전달
+
+### Mouse 이벤트
+- onClick : 마우스 버튼을 클릭했을 때 발생(Down + Up)
+- onMouseDown : 마우스 버튼을 눌렀을 때 발생
+- onMouseUp : 마우스 버튼을 떼었을 때 발생
+- onMouseEnter : 요소 밖에서 안으로 마우스 커서가 들어갔을 때 발생
+- onMouseLeave : 요소 안에서 밖으로 마우스 커서가 나갔을 때 발생
+- onMouseMove : 요소 안에서 마우스 커서를 움직였을 때 발생
+
+### Keyboard 이벤트
+- onKeyDown : 키를 눌렀을 때 발생(물리적인 키에 반응)
+- onKeyUp : 키를 떼었을 때 생성
+- onKeyPress : 키를 눌러서 문자가 입력되었을 때 발생(눌린 문자에 반응) -> deprecated
+
+### Focus, Form 이벤트
+- onFocus :  요소가 포커스 될 때 발생
+- onBlur : 요소의 포커스가 사라졌을 때 발생
+- onChange : 요소의 값이 변경되었을 때 발생
+
+### Controlled Componenet(제어 컴포넌트)
+- React에 의해 입력 요소의 값이 제어되는 컴포넌트
+- 장점
+  - 컴포넌트의 state와 input value가 완전히 동일한 값을 가짐(신뢰 가능한 단일 출처)
+  - 다른 컴포넌트에 input value를 전달하거나 다른 이벤트 핸들러에서 값을 재설정 할 수 있음
+- 단점
+  - 값이 변경되는 매 순간 렌더링이 됨(해당 컴포넌트의 영향 범위가 클 수록 성능 저하)
+- Uncontrolled Component
+  - React에 의해 입력 요소의 값이 제어되는 컴포넌트

@@ -28,6 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #ffebe9;
 }
 
 h1 {
@@ -65,4 +66,32 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.FocusForm button,
+.FocusForm input {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.FocusForm .box {
+  width: 250px;
+  height: 100px;
+  background: #6666ffaa;
+  margin-bottom: 20px;
+}
+
+.ControlledEvent > div {
+  margin-bottom: 30px;
+}
+.ControlledEvent button,
+.ControlledEvent input {
+  padding: 10px 20px;
+  margin-right: 20px;
+}
+.ControlledEvent .box {
+  width: 250px;
+  height: 100px;
+  background: #6666ffaa;
 }

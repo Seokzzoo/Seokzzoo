@@ -1,0 +1,27 @@
+.App {
+  display: flex;
+}
+
+.SideBar {
+  background-color: aqua;
+  width: 200px;
+  height: 100vh; /* vh -> 윈도우의 높이 */
+}
+
+.MemoContainer {
+  background-color: beige;
+  flex: 1;
+}
+
+.MemoContainerTitle {
+  width: 100%;
+  box-sizing: border-box; /* 삐져나감 방지! */
+  font-size: 2rem;
+}
+
+.MemoContainerContent {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+  min-height: 600px;
+}
